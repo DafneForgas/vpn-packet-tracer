@@ -94,7 +94,7 @@ interface Serial0/3/1
 
 ---
 
-## Evidencias
+## Capturas
 
 ### Topología de red
 ![Topología](imagenes/topologia.png)
