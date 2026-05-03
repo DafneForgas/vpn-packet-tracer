@@ -1,45 +1,53 @@
 # Proyecto VPN Site-to-Site con Cisco Packet Tracer
 
-## Descripción
-Este proyecto implementa una red VPN site-to-site utilizando Cisco Packet Tracer, permitiendo la comunicación segura entre tres redes distintas:
+## Descripción del proyecto
 
-- Cádiz → 192.168.10.0/24  
-- Barcelona → 192.168.20.0/24  
-- Asturias → 192.168.30.0/24  
+Este proyecto implementa una **red VPN site-to-site** utilizando Cisco Packet Tracer, permitiendo la comunicación segura entre tres redes distintas:
+
+- **Cádiz** → 192.168.10.0/24  
+- **Barcelona** → 192.168.20.0/24  
+- **Asturias** → 192.168.30.0/24  
 
 Se han configurado túneles VPN IPsec entre:
+
 - Cádiz ↔ Barcelona  
 - Cádiz ↔ Asturias  
 
 ---
 
 ## Objetivo
-Permitir la comunicación segura entre sedes mediante cifrado IPsec utilizando routers Cisco.
+
+El objetivo principal es permitir la **comunicación segura entre sedes** mediante el uso de cifrado IPsec en routers Cisco, simulando un entorno empresarial real.
 
 ---
 
 ## Topología de red
 
-Redes LAN:
+### Redes LAN
 - Cádiz: 192.168.10.0/24  
 - Barcelona: 192.168.20.0/24  
 - Asturias: 192.168.30.0/24  
 
-Redes WAN:
+### Redes WAN
 - Cádiz ↔ Barcelona: 15.0.0.0/8  
 - Cádiz ↔ Asturias: 16.0.0.0/8  
 
 ---
 
-## Configuración VPN
+## Configuración de la VPN
 
-### Fase 1 (ISAKMP)
+### Fase 1 – ISAKMP
+
+Configuración de la negociación de claves:
+
+```bash
 crypto isakmp policy 10
  encr aes 256
  authentication pre-share
  hash sha
  group 2
  lifetime 86400
+
 
 ### Claves precompartidas
 crypto isakmp key v1_policy10 address 15.0.0.2  
@@ -88,7 +96,7 @@ interface Serial0/3/1
 
 ---
 
-## Evidencias
+## Capturas
 
 ### Topología de red
 ![Topología](imagenes/topologia.png)
