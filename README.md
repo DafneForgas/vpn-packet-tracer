@@ -38,9 +38,7 @@ El objetivo principal es permitir la **comunicación segura entre sedes** median
 
 ### Fase 1 – ISAKMP
 
-Configuración de la negociación de claves:
-
-```bash
+### Configuración de la negociación de claves:
 crypto isakmp policy 10
  encr aes 256
  authentication pre-share
@@ -120,4 +118,5 @@ interface Serial0/3/1
 ---
 
 ## Conclusión
-Se ha implementado correctamente una red VPN site-to-site con IPsec, permitiendo la comunicación segura entre distintas sedes mediante cifrado de tráfico.
+Se ha implementado correctamente una red VPN site-to-site con IPsec permitiendo la comunicación segura entre distintas sedes mediante cifrado de tráfico.
+
